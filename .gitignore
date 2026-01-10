@@ -2,3 +2,7 @@
 !LICENSE
 !LICENSE.md
 !*.java
+!*.csv
+!.gitignore
+
+*
