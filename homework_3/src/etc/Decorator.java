@@ -28,17 +28,6 @@ abstract class DecoratorAbstract implements BasicInterface {
 
     abstract public void other();
 }
-
-/*class DecoratorSum extends DecoratorAbstract {
-    public DecoratorSum(BasicInterface o) {
-        super(o);
-    }
-
-    public void other() {
-        System.out.println("DecoratorSum");
-    }
-}*/
-
 class DecoratorSub extends DecoratorAbstract {
     public DecoratorSub(BasicInterface o) {
         super(o);
@@ -109,8 +98,6 @@ class DecoratorPower2 extends DecoratorAbstract {
 
 public class Decorator {
     public static void main(String[] args) {
-        AnyClass b = new AnyClass();
-//        DecoratorAbstract a = new DecoratorPower(b);
         DecoratorAbstract demo = new DecoratorPower(new DecoratorPower2(new DecoratorSub(new AnyClass())));
         int result = demo.op(1,3);
         System.out.println("result: " + result);
