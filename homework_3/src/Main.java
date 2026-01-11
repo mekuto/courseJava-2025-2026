@@ -2,6 +2,7 @@ import etc.Builder;
 import etc.ChainOfResponsibility;
 import etc.Strategy;
 import etc.Proxy;
+import etc.Decorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,8 @@ public class Main {
         System.out.println("==============================================================");
         System.out.println("Demo: template Proxy");
         Proxy.main(args);
+        System.out.println("==============================================================");
+        System.out.println("Demo: template Decorator");
+        Decorator.main(args);
     }
 }
