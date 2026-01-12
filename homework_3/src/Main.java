@@ -1,3 +1,13 @@
+/*
+ * File: Main.java
+ * Path: ./
+ * Build: javac ./Main.java
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Main.java
+ */
+
 import etc.*;
 
 public class Main {

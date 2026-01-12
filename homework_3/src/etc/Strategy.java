@@ -1,3 +1,13 @@
+/*
+ * File: Strategy.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Strategy template
+ */
+
 package etc;
 
 import java.util.Arrays;
@@ -115,6 +125,9 @@ class ConcreteHeapSort implements Sort<int[]> {
 
 
 public class Strategy {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
     static int[] rnd() {
         final int maxSize = 15;
 

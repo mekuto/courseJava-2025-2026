@@ -1,3 +1,13 @@
+/*
+ * File: Decorator.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Decorator template
+ */
+
 package etc;
 
 interface BasicInterface {
@@ -97,6 +107,9 @@ class DecoratorPower2 extends DecoratorAbstract {
 }
 
 public class Decorator {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
     public static void main(String[] args) {
         DecoratorAbstract demo = new DecoratorPower(new DecoratorPower2(new DecoratorSub(new AnyClass())));
         int result = demo.op(1,3);

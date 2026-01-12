@@ -1,3 +1,13 @@
+/*
+ * File: ChainOfResponsibility.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Chain of responsibility template
+ */
+
 package etc;
 
 import java.lang.NullPointerException;
@@ -104,6 +114,9 @@ class ConcreteTruncateArray extends Handler {
 
 
 public class ChainOfResponsibility {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
     public static void main(String[] args) {
         Handler chainNew = new ConcreteNewArray();
         Handler chainFill = new ConcreteFillArray();

@@ -1,3 +1,13 @@
+/*
+ * File: Proxy.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Proxy template
+ */
+
 package etc;
 
 import java.util.ArrayList;
@@ -152,6 +162,10 @@ class ProxyObject implements InterfaceNode {
 }
 
 public class Proxy {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
+
     public static void main(String[] args) {
         ProxyObject proxy = new ProxyObject();
         String command = "Up Down Left Right";

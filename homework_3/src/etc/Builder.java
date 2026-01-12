@@ -1,3 +1,13 @@
+/*
+ * File: Builder.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Builder template
+ */
+
 package etc;
 
 import java.time.LocalDate;
@@ -186,6 +196,9 @@ class Car {
 }
 
 public class Builder {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
     public static void main(String[] args) {
         String carRecord = "ACURA,Acura,Акура,0,Япония,1986,2025,ACURA_CDX,CDX,сдх,D,2016,2021";
         var carField = carRecord.split(",");

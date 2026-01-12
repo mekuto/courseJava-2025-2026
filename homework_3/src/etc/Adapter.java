@@ -1,3 +1,13 @@
+/*
+ * File: Adapter.java
+ * Path: ./etc/
+ *
+ * Date: 2026-01-12
+ * Author: Aleksandr Karpenko Ivanovich
+ *
+ * Thesis: Adapter template
+ */
+
 package etc;
 
 import java.lang.Math;
@@ -49,6 +59,9 @@ class ClientNode extends RemoteNode implements Trigonometry {
 }
 
 public class Adapter {
+    private final static String MODULE_INFO =
+            "This module not for production use. Only for studying purpose.";
+
     public static void main( String[] args ) {
         final RemoteNode remoteNode = new RemoteNode();
         final ClientNode clientNode = new ClientNode( remoteNode );
