@@ -36,7 +36,7 @@ public class SwitchesFromOneToTwoAndBack {
         @Override
         public void run() {
             do {
-                if (Thread.currentThread().isInterrupted()) break;
+                if (Thread.currentThread().isInterrupted()) return;
                 System.out.println(taskString);
                 Thread.yield();
                     try {
