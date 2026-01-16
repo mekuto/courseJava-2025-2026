@@ -1,8 +1,14 @@
+*.class
+*.iml
+*.xml
+
 !README.md
 !LICENSE
 !LICENSE.md
 !*.java
 !*.csv
 !.gitignore
+!homework*
 
-*
+
+
