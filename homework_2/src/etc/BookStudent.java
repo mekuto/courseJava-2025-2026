@@ -11,6 +11,7 @@
 package etc;
 
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Optional;
 
 public class BookStudent implements Comparable<BookStudent> {
@@ -23,6 +24,7 @@ public class BookStudent implements Comparable<BookStudent> {
     private final String title;
     private final int year;
     private final int numberOfPages;
+    private final String stringForHash;
 
     public BookStudent(String ISBN, String discipline, String author,
                        String title, int year, int pages) {
@@ -41,7 +43,6 @@ public class BookStudent implements Comparable<BookStudent> {
             this.year = -1;
             this.numberOfPages = -1;
         } else {
-
             this.ISBN = ISBN;
             this.discipline = discipline;
             this.author = author;
@@ -49,6 +50,7 @@ public class BookStudent implements Comparable<BookStudent> {
             this.year = year;
             this.numberOfPages = pages;
         }
+        stringForHash = ISBN + author + title + year + numberOfPages;
     }
 
     public String getISBN() {
@@ -88,5 +90,18 @@ public class BookStudent implements Comparable<BookStudent> {
     @Override
     public int compareTo(BookStudent o) {
         return this.numberOfPages - o.numberOfPages;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        BookStudent interest = (BookStudent) obj;
+        return stringForHash.equalsIgnoreCase(interest.stringForHash);
+    }
+
+    @Override
+    public int hashCode() {
+        return stringForHash.hashCode();
     }
 }
