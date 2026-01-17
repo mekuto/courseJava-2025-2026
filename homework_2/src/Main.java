@@ -45,14 +45,6 @@ public class Main {
             }
         }
 
-//        for (Student s : studentList) {
-//            System.out.println(s.getName() + ";" +
-//                    s.getLastname() + ";" +
-//                    s.getEducationInstitute() + ";" +
-//                    s.getFaculty() + ";"+
-//                    s.getYearAtUniversity());
-//        }
-
         studentList.forEach(System.out::println);
     }
 
